@@ -88,13 +88,13 @@ def get_labels(df):
         c = c + 1
     return ans
 
-df = pd.read_csv('./datasets/3MC.csv', sep=',',
-                     header=None)
-df.drop(df.columns[[-1,]], axis=1, inplace=True)
+test = np.loadtxt('./2d_emb_gbt.npy')
+df = pd.DataFrame(test) 
+# df.drop(df.columns[[-1,]], axis=1, inplace=True)
 # print(df)
-n = 8
-pre_k = 20
-k = 4
+n = 20
+pre_k = 200
+k = 70
 graph = knn_graph(df, n)
 graph = part(graph, pre_k, df)
 merge(graph, df, 2.0, k)
