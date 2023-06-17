@@ -1,7 +1,5 @@
 from selfcheck import *
 import json
-N_SAMPLES = 100
-
 
 def wiki_selfcheck(gpt_answer, annotation, samples):
     annotation_score = 0
@@ -33,7 +31,7 @@ def check_ans(file):
     scores = []
     with open(file, 'r') as file:
         data = json.load(file)
-        for i in range(N_SAMPLES):
+        for i in range(238):
             gpt_answer = data[i]["gpt3_sentences"]
             annotation = data[i]['annotation']
             samples = data[i]['gpt3_text_samples']
