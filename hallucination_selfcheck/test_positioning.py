@@ -15,6 +15,6 @@ def check_ans(file):
 
 if __name__ == "__main__":
 
-  substitution = check_ans("./dataset/substitution.json")
-  with open("substitution.txt", "w", encoding='utf-8') as f:
-      f.write("substitution数据集平均分: {}".format(substitution))
+  substitution = check_ans("./dataset/positioning.json")
+  with open("positioning.txt", "w", encoding='utf-8') as f:
+      f.write("positioning数据集平均分: {}".format(substitution))

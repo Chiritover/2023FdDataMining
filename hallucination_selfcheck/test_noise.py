@@ -1,7 +1,7 @@
 from selfcheck import *
 import json
 
-N_SAMPLES = 100
+N_SAMPLES = 80
 
 
 def check_ans(file):

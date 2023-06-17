@@ -52,4 +52,4 @@ if __name__ == "__main__":
 
     wiki = check_ans("./dataset/wiki.json")
     with open("wiki.txt", "w", encoding='utf-8') as f:
-      f.write("substitution数据集平均分: {}".format(wiki))
+      f.write("wiki数据集平均分: {}".format(wiki))
