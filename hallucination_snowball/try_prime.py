@@ -4,7 +4,7 @@ import openai
 import time
 import re
 
-data_path = './data/Snowballed_Hallucination/primality_testing.json'
+data_path = 'data/primality_testing.json'
 with open(data_path, 'r') as f:
     data = json.load(f)
 print(len(data))
@@ -30,6 +30,7 @@ for questions in data:
         query = {'question':questions['question'], 'answer':answer}
         b = json.dumps(query)
         f.write(b)
+        f.write('\n')
         
 
    
